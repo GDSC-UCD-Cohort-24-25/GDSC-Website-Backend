@@ -6,7 +6,7 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyBR0MAhNBSqYBEbGfcxVTa-1Gin-rGdN9E",
   authDomain: "gdsc-ucdavis.firebaseapp.com",
   projectId: "gdsc-ucdavis",
   storageBucket: "gdsc-ucdavis.firebasestorage.app",

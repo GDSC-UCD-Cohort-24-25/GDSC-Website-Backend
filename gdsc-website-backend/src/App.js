@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// for showcase
+import ProjectsForm from './components/projectsForm';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+      {/* for showcase */}
+      <ProjectsForm />
     </div>
   );
 }
