@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Signin from './components/auth/signin';
+import Signup from './components/auth/signup';
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <Signin />
+      <Signup />
     </div>
   );
 }

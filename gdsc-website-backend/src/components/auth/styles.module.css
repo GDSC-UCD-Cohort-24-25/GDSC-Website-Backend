@@ -1,0 +1,16 @@
+.signinPage {
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 300px;
+    padding: 10px;
+    background-color: pink;
+}
+
+.error {
+    color: red;
+}
