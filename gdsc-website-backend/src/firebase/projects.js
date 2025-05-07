@@ -8,11 +8,11 @@ export const addOneProject = (project) => {
     // description: string
     // tags: array
 
-    addDoc(collection(db, 'projects'), {
+    return addDoc(collection(db, 'projects'), {
         ...project,
         created: new Date(),
     })
-    .then(returned => console.log("Successfully created"));
+    .then(returned => returned);
 };
 
 export const getAllProjects = () => {
