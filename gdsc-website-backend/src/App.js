@@ -3,6 +3,7 @@ import './App.css';
 
 // for showcase
 import ProjectsForm from './components/projectsForm';
+import ProjectsDisplay from './components/ProjectsDisplay';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       </header>
       {/* for showcase */}
       <ProjectsForm />
+      <ProjectsDisplay />
     </div>
   );
 }
