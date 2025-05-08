@@ -1,30 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Events from "./events";
+import "./App.css";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("events");
 
-
-
-
-
-
-  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Firebase Backend
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="navbar">
+        <span>GDSC Admin</span>
+        <button onClick={() => setCurrentPage("events")}>Events</button>
+      </div>
+      
+      <div className="content">
+        {currentPage === "events" && <Events />}
+      </div>
     </div>
   );
 }

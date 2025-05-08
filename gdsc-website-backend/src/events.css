@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    margin-bottom: 15px;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+  }
+  
+  input, textarea {
+    width: 300px;
+    padding: 5px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
