@@ -110,7 +110,7 @@ const Events = () => {
         <h2>Add Event</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Title*: </label>
+            <label>Title: </label>
             <input
               type="text"
               name="title"
@@ -121,7 +121,7 @@ const Events = () => {
           </div>
           
           <div>
-            <label>Description*: </label>
+            <label>Description: </label>
             <textarea
               name="description"
               value={newEvent.description}
@@ -131,7 +131,7 @@ const Events = () => {
           </div>
           
           <div>
-            <label>Date*: </label>
+            <label>Date: </label>
             <input
               type="datetime-local"
               name="date"
