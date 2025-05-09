@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addOneProject }from "../firebase/projects";
 
-const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
+const ProjectsForm = ({ projects, setProjects, tempMessage, toggleForm }) => {
     const [title, setTitle] = useState('')
     const [by, setBy] = useState('')
     const [description, setDescription] = useState('')
@@ -29,6 +29,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
         setBy('')
         setDescription('')
         setTags([])
+        toggleForm()
     }
 
     const addTag = () => {
@@ -46,6 +47,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
             <form onSubmit={submit}>
                 <h2 class="text-xl font-semibold text-gray-800">New Project</h2>
 
+                {/* title input */}
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="title">Title</label>
                     <input 
@@ -58,6 +60,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
 
                 </div>
 
+                {/* by input */}
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="by">By</label>
                     <input 
@@ -69,6 +72,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
                         onChange={(e) => setBy(e.target.value)}/>
                 </div>
 
+                {/* description input */}
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="description">Description</label>
                     <textarea 
@@ -80,6 +84,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
                         onChange={(e) => setDescription(e.target.value)}></textarea>
                 </div>
 
+                {/* tags input */}
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="tags">Tags <span class="text-gray-400">(comma-separated)</span></label>
                     <div className="flex flex-row">
@@ -120,6 +125,9 @@ const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
                 <button type="submit" class="w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition">
                     Submit
                 </button>
+
+                {/* cancel button */}
+                <button className="mt-2 " onClick={() => toggleForm()}>cancel</button>
                 {error && <div className="text-red-500">{error}</div>}
             </form>
         </div>

@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react'
-import { getAllProjects } from '../firebase/projects'
-
 const ProjectsDisplay = ({ projects }) => {
     return (
         <div className="grid grid-cols-4 gap-4 m-2">
