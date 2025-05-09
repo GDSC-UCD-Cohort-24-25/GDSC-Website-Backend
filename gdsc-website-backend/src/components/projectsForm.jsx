@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addOneProject }from "../firebase/projects";
 
-const ProjectsForm = () => {
+const ProjectsForm = ({ projects, setProjects }) => {
     const [title, setTitle] = useState('')
     const [by, setBy] = useState('')
     const [description, setDescription] = useState('')
@@ -11,15 +11,17 @@ const ProjectsForm = () => {
     const [error, setError] = useState(null)
 
 
-    const submit = (e) => {
+    const submit = async (e) => {
         e.preventDefault()
-        if (title === '' || by === '' || description === '' || tags === '') {
+        if (title === '' || by === '' || description === '' ) {
             setError('Please fill in all the fields.')
             return 
         }
 
         console.log('Add project', { title, description, by, tags })
-        addOneProject({ title, description, by, tags })
+        const project = await addOneProject({ title, description, by, tags })
+        console.log(project)
+        setProjects(projects.concat(project))
 
         setError(null)
         setTitle('')

@@ -1,18 +1,24 @@
 import db from './firebase';
-import { collection, addDoc, getDocs } from 'firebase/firestore';
+import { collection, addDoc, getDocs, getDoc } from 'firebase/firestore';
 
-export const addOneProject = (project) => {
+export const addOneProject = async (project) => {
     // Schema
     // title: string
     // by: string
     // description: string
     // tags: array
 
-    return addDoc(collection(db, 'projects'), {
+    // add to the database
+    const docRef = await addDoc(collection(db, 'projects'), {
         ...project,
         created: new Date(),
     })
-    .then(returned => returned);
+
+    // get the doc
+    const docSnap = await getDoc(docRef)
+    console.log(docSnap.data())
+
+    return docSnap.data()
 };
 
 export const getAllProjects = () => {

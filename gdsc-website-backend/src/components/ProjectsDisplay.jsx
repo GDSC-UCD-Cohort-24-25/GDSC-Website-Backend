@@ -1,18 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getAllProjects } from '../firebase/projects'
 
-const ProjectsDisplay = () => {
-    const [projects, setProjects] = useState([])
-    
-    useEffect(() => {
-        const fun = async () => {
-            const result = await getAllProjects()
-            setProjects(result)
-            console.log(result)
-        }
-        fun()
-    },[])
-
+const ProjectsDisplay = ({ projects }) => {
     return (
         <div className="grid grid-cols-4 gap-4 m-2">
             {

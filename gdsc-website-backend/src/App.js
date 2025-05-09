@@ -4,6 +4,7 @@ import './App.css';
 // for showcase
 import ProjectsForm from './components/projectsForm';
 import ProjectsDisplay from './components/ProjectsDisplay';
+import ProjectsPage from './components/ProjectsPage';
 
 function App() {
   return (
@@ -23,8 +24,7 @@ function App() {
         </a>
       </header>
       {/* for showcase */}
-      <ProjectsForm />
-      <ProjectsDisplay />
+      <ProjectsPage />
     </div>
   );
 }
