@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addOneProject }from "../firebase/projects";
 
-const ProjectsForm = ({ projects, setProjects }) => {
+const ProjectsForm = ({ projects, setProjects, tempMessage }) => {
     const [title, setTitle] = useState('')
     const [by, setBy] = useState('')
     const [description, setDescription] = useState('')
@@ -23,6 +23,7 @@ const ProjectsForm = ({ projects, setProjects }) => {
         console.log(project)
         setProjects(projects.concat(project))
 
+        tempMessage('Successfully saved ' + project.title + ' to the database.')
         setError(null)
         setTitle('')
         setBy('')
