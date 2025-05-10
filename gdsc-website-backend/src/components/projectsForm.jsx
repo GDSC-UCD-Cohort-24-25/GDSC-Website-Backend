@@ -43,7 +43,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage, toggleForm }) => {
     }
 
     return (
-        <div class="max-w-md mx-auto bg-white border border-gray-300 shadow-sm rounded-xl p-6 space-y-4">
+        <div class="max-w-md bg-gray-200 border border-gray-300 shadow-sm rounded-xl p-6 my-2 space-y-4">
             <form onSubmit={submit}>
                 <h2 class="text-xl font-semibold text-gray-800">New Project</h2>
 
