@@ -79,7 +79,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage, toggleForm }) => {
                         id="description" 
                         name="description" 
                         rows="4" 
-                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        class="resize-none w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}></textarea>
                 </div>
@@ -87,7 +87,7 @@ const ProjectsForm = ({ projects, setProjects, tempMessage, toggleForm }) => {
                 {/* tags input */}
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="tags">Tags <span class="text-gray-400">(comma-separated)</span></label>
-                    <div className="flex flex-row">
+                    <div className="flex flex-row gap-x-1">
                         <input 
                             type="text" 
                             id="tags" 
